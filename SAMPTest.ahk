@@ -40,6 +40,16 @@ return
 
 ;#########################################################################################################
 
+Numpad0::
+ped:=getTargetPed()
+if(ped)
+{
+        id := getIdByPed(ped)
+        if(id>-1)
+                nameD := getPlayerNameById(id)
+                sendChatMessage("/me looks over at " nameD ".")
+}
+return
 
 ;Type in a nickname and it shows some info about this player
 Numpad1::
