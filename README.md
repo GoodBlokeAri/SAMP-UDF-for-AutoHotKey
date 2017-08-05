@@ -33,6 +33,7 @@ Functions:
     ; #     - getIP()                                   get server ip                                                     #
     ; #     - getHostname()                             get server hostname                                               #
     ; #     - countOnlinePlayers()                      get players count                                                 #
+    ; #     - getTargetPed()                            fetch targeted player                                             #
     ; # ----------------------------------------------------------------------------------------------------------------- #
     ; #     - updateScoreboardDataEx()                  (internal stuff)                                                  #
     ; #     - updateOScoreboardData()                   (internal stuff)                                                  #
