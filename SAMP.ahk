@@ -814,6 +814,29 @@ updateOScoreboardData() {
     return 1
 }
 
+getTargetPed()
+{
+        if(!checkHandles())
+        return 0
+       
+        dwAddress := readDWORD(hGTA, 0xB6F3B8)
+    if(ErrorLevel) {
+        ErrorLevel := ERROR_READ_MEMORY
+        return 0
+    }
+        if(!dwAddress)
+                return 0
+               
+        dwAddress := readDWORD(hGTA, dwAddress+0x79C)
+    if(ErrorLevel) {
+        ErrorLevel := ERROR_READ_MEMORY
+        return 0
+    }
+       
+        ErrorLevel := ERROR_OK
+        return dwAddress
+}
+
 ; ##### Player Functions #####
 
 ; return HP or -1 on error
